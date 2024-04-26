@@ -46,7 +46,7 @@ def download_sogou_url():
                 page_num = 1
             #检查是否需要更新文件
             #检查最后一个词库
-            url_end_check = 'https://pinyin.sogou.com' + str(order_way_num) + '/' + page_num
+            url_end_check = 'https://pinyin.sogou.com' + str(order_way_num) + '/' + str(page_num)
             time.sleep(random.randint(0,3))
             r_end_check = requests.get(url_end_check,headers=headers)
             soup_end_check = BeautifulSoup(r_end_check.text,'lxml')
