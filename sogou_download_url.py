@@ -53,6 +53,8 @@ def download_sogou_url():
             #细胞词名称
             detail_title_list_end_check = soup_end_check.find_all("div", {"class": "detail_title"})
             end_num = len(detail_title_list_end_check)
+            if end_num == 0:
+              break
             end_dict_url = detail_title_list_end_check[end_num-1].a.get('href')
             cursor.execute("SELECT dict_url FROM status WHERE dict_url='%s'" %(end_dict_url))
             end_dict_name_len = len(cursor.fetchall())
