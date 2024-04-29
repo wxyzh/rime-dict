@@ -3,7 +3,7 @@ name: rime_dict_update
 on:
   push:
     tags:
-      - '*'
+      - '*.update'
   workflow_dispatch:
 
 env:
