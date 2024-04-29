@@ -1,9 +1,6 @@
 name: rime_dict
 
 on:
-  push:
-    tags:
-      - '*'
   workflow_dispatch:
 
 env:
